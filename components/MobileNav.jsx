@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import {CiMenuFries} from 'react-icons/ci';
 import WordRotate from './magicui/word-rotate';
+import { FlipWords } from './ui/flip-words';
 
 const links = [
     {
@@ -29,6 +30,7 @@ const links = [
 ];
 
 const MobileNav = () => {
+    const words = ["_dev", "();", "./"];
     const pathname = usePathname();
   return <Sheet>
         <SheetTrigger className="flex justify-center items-center">
@@ -37,12 +39,12 @@ const MobileNav = () => {
         <SheetContent className="flex flex-col">
             <div className="mt-32 mb-40 text-center text-2xl">
                 <Link href="/">
-                    <h1 className="text-4xl font-semibold">
-                    ranjith
-                    <WordRotate
+                    <h1 className="text-3xl font-semibold">
+                    ranjith<FlipWords words={words} />
+                    {/* <WordRotate
                         className="inline-block text-accent"
                         words={["_dev", "();", "./"]}
-                    />
+                    /> */}
                     </h1>
                 </Link>
             </div>
