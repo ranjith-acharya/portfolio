@@ -11,7 +11,7 @@ const Home = () => {
         {/* personal info Starts */}
         <div className="text-center lg:text-left order-2 lg:order-none">
           <span className="text-xl">Software Engineer</span>
-          <h1 className="h2 mb-6">Hello I'm <br /> <span className="text-accent">RanjithKrishna Acharya</span></h1>
+          <h1 className="h2 mb-6">Hello I&apos;m <br /> <span className="text-accent">RanjithKrishna Acharya</span></h1>
           <p className="max-w-[500px] mb-9 text-white/80">
           {/* Turning complex ideas into scalable solutions with a focus on innovation and efficiency. I excel at transforming challenges into opportunities through impactful software engineering. */}
           Turning complex ideas into scalable, innovative solutions with efficient software engineering.
