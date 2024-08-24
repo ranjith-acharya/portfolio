@@ -16,3 +16,13 @@
         @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
     }
 }
+
+::-webkit-scrollbar {width: 8px;}::-webkit-scrollbar-thumb {background: #00ff99;}
+
+.text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+}
