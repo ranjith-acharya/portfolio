@@ -1,14 +1,17 @@
 "use client"
-import { FaHtml5, FaCss3, FaJs, FaDatabase, FaFigma, FaLaravel, FaPhp } from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs, SiBootstrap } from 'react-icons/si'
+import { FaHtml5, FaCss3, FaJs, FaDatabase, FaFigma, FaLaravel, FaPhp, FaPython, FaDev, FaServer } from "react-icons/fa"
+import { SiTailwindcss, SiNextdotjs, SiBootstrap, SiAzuredevops } from 'react-icons/si'
+
+const link1 = ""
 
 const about = {
   title: "about me",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum, vitae facilisis orci risus id nisi.",
+  description: "Hello, I'm RanjithKrishna Acharya, a dedicated Junior Software Engineer at ",
+  description2: "Before this, I contributed as a Data Science Trainee at @TuringMinds.AI, where I honed my skills in data analysis, visualization, and model building. My professional journey reflects a passion for both software development and data science, and I thrive on taking on new challenges.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Ranjith",
+      fieldValue: "RanjithKrishna Acharya",
     },
     {
       fieldName: "Phone",
@@ -53,7 +56,7 @@ const experience = {
 }
 
 const skills = {
-  title: 'my Skills',
+  title: 'my skills',
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum, vitae facilisis orci risus id nisi.",
   skillList: [
     {
@@ -65,12 +68,24 @@ const skills = {
       name: "css 3",
     },
     {
+      icon: <SiBootstrap />,
+      name: "bootstrap 5",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "tailwind.css",
+    },
+    {
       icon: <FaJs />,
       name: "javascript",
     },
     {
       icon: <FaDatabase />,
       name: "mysql, postgresql",
+    },
+    {
+      icon: <FaPython />,
+      name: "python",
     },
     {
       icon: <FaPhp />,
@@ -81,20 +96,16 @@ const skills = {
       name: "laravel",
     },
     {
-      icon: <SiBootstrap />,
-      name: "bootstrap 5",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
       icon: <SiNextdotjs />,
       name: "next.js",
     },
     {
       icon: <FaFigma />,
       name: "figma",
+    },
+    {
+      icon: <FaServer />,
+      name: "DevOps",
     },
   ]
 }
@@ -148,17 +159,53 @@ const Resume = () => {
                   </ScrollArea>
                 </div>
               </TabsContent>
-              <TabsContent value="skills" className="w-full">
+
+              <TabsContent value="skills" className="w-full mb-4">
                 <div className="flex flex-col gap-[30px]">
-                  <div>
-                    <h3>{skills.title}</h3>
-                    <p>{skills.description}</p>
+                  <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                    <h3 className="text-4xl font-bold">{skills.title}</h3>
+                    {/* <p>{skills.description}</p> */}
                   </div>
-                  
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grids-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    })}
+                  </ul>
                 </div>
               </TabsContent>
-              <TabsContent value="about" className="w-full">
-                about
+
+              <TabsContent value="about" className="w-full text-center lg:text-left mb-4">
+                <div className="flex flex-col gap-[30px]">
+                    <h3 className="text-4xl font-bold">{about.title}</h3>
+                    <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">{about.description}
+                      <a href="https://www.linkedin.com/school/teamlease-edtech/" target="_blank" >
+                        <span>@TeamLeaseEdTech</span>
+                        {/* <span className="text-accent border-b-2 border-accent">@TeamLeaseEdTech</span> */}
+                      </a>.
+                    </p>
+                    <p className="-mt-6 max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description2}</p>
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[620px]mx-auto xl:mx-0">
+                    {about.info.map((item, index) => {
+                      return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-lg ">{item.fieldValue}</span>
+                      </li>
+                    })}
+                  </ul>
+                </div>
               </TabsContent>
             </div>
           </Tabs>
