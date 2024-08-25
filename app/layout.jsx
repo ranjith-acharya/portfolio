@@ -11,7 +11,8 @@ const jetbrains_Mono = JetBrains_Mono(
 });
 
 export const metadata = {
-  title: "Ranjith's Portfolio",
+  title: "RanjithKrishna Acharya Portfolio",
+  keywords: "ranjith acharya, ranjithkrishna acharya, ranjith krishna acharya, ranjith krishna, ranjeet, ranjeet krishna, ranjeetkrishna",
   description: "A sleek and sophisticated showcase of Ranjith's work, blending modern design with a minimalist aesthetic.",
 };
 
