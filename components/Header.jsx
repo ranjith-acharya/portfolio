@@ -23,8 +23,8 @@ const Header = () => {
         {/* navigation bar */}
         <div className="hidden lg:flex items-center gap-8">
             <Nav />
-            <Link href="/">
-                <Button>Hire me</Button>
+            <Link href="/assets/resume/RanjithKrishna_Acharya - Resume.pdf" download>
+              <Button>Download CV</Button>
             </Link>
         </div>
 
