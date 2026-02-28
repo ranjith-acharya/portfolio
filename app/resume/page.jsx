@@ -39,7 +39,7 @@ const experience = {
   items: [
     {
       company: "TeamLease Edtech Ltd.",
-      position: "Jr. Software Engineer",
+      position: "Associate Software Engineer",
       duration: "2023 - Present",
     },
     {
