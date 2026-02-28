@@ -6,7 +6,7 @@ const link1 = ""
 
 const about = {
   title: "about me",
-  description: "Hello, I'm RanjithKrishna Acharya, a dedicated Junior Software Engineer at ",
+  description: "Hello, I'm RanjithKrishna Acharya, a dedicated Associate Software Engineer at ",
   description2: "Before this, I contributed as a Data Science Trainee at @TuringMinds.AI, where I honed my skills in data analysis, visualization, and model building. My professional journey reflects a passion for both software development and data science, and I thrive on taking on new challenges.",
   info: [
     {
@@ -19,7 +19,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2.1 Years",
+      fieldValue: "3.7 Years",
     },
     {
       fieldName: "Nationality",
